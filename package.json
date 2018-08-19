@@ -1,10 +1,10 @@
 {
   "name": "vending-machine",
   "version": "1.0.0",
-  "description": "",
+  "description": "vending machine with java scripts",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose"
+    "test": "npx jest"
   },
   "keywords": [],
   "author": "",
