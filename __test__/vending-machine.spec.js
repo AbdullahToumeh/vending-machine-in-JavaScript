@@ -1,13 +1,14 @@
 const VendingMachine = require("../src/vending-machine.js")
 
 let vendingMachine = new VendingMachine();
+let vendingMachine1 = new VendingMachine();
 
 
 describe('Vending Machine', () => {
     // printing inventory
     describe('when the user ask to see inventory ', () => {
         it('Should print a list of the inventory with all the items and details', () => {
-            expect(vendingMachine.printingInventory()).toEqual({
+            expect(vendingMachine1.printingInventory()).toEqual({
                 Pepsi: { stock: 5 },
                 Snickers: { stock: 2 },
                 'Ice Coffee': { stock: 3 },
@@ -19,26 +20,19 @@ describe('Vending Machine', () => {
     })
     // refilling inventory
     describe('when refill the inventory ', () => {
-        it('Should ', () => {
-            expect().toEqual()
+        it('Should return the refilled items ', () => {
+            expect(vendingMachine.refillInventory('Pepsi', 7)).toEqual({
+                name: 'Pepsi',
+                stock: 12,
+            })
         })
     })
     // re-supplying change
     describe('when refill the inventory ', () => {
-        it('Should ', () => {
-            expect().toEqual()
+        it('Should return the new values ', () => {
+            expect(vendingMachine.resuplychange('loonie', 10)).toEqual({ name: 'loonie', count: 20 })
         })
     })
-    // dispensing inventory based on payment
-    describe('when refill the inventory ', () => {
-        it('Should ', () => {
-            expect().toEqual()
-        })
-    })
-    // returning change as coins (eg. $0.35 is 1 quarter and 1 dime)
-    describe('when refill the inventory ', () => {
-        it('Should ', () => {
-            expect().toEqual()
-        })
-    }) 
+  
+
 })
